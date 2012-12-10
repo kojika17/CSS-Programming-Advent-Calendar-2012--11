@@ -1,0 +1,58 @@
+// ball Action
+
+[class^=ball] {
+	width: ballWidth;
+	height: ballWidth;
+	border-radius: 50%;
+	background: #333;
+	overflow: hidden;
+	font-size: 21px;
+	color: #fcfcfc;
+	text-indent: -777px;
+	text-align: center;
+}
+
+// stage1
+.ball1 {
+	m 50% 50%;
+	// animations(keyBall5, 0s, 1s);
+	// animations(keyBall4, 0s, 2.5s);
+	// animations(keyBall3, 10.2s, 2s);
+	// animations(keyBall2, 5.5s, 5s);
+	animations(keyBall1, 0.2s, 6s);
+	animation-fill-mode: forwards;
+}
+.ball2 {
+	m barBound 80px;
+	animations(keyBall2, 5.5s, 5.5s);
+	animation-fill-mode: forwards;
+}
+.ball3 {
+	m barBound (bound - 45px);
+	animations(keyBall3, 10.2s, 2s);
+	animation-fill-mode: forwards;
+}
+.ball4 {
+	m barBound 20px;
+	animations(keyBall4, 11.6s, 2.5s);
+	animation-fill-mode: forwards;
+}
+.ball5 {
+	m barBound 124px;
+	animations(keyBall5, 13.7s, 1.4s);
+	animation-fill-mode: forwards;
+}
+.ball6 {
+	m barBound (bound - 30px);
+	animations(keyBall6, 15s, 2s);
+	animation-fill-mode: forwards;
+	&:before {
+		content: 'Thanks';
+	}
+	&:after {
+		content: 'for Playing CSS!';
+	}
+}
+
+
+

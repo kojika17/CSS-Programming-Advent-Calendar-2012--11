@@ -1,0 +1,101 @@
+// animation (220 x 243)
+//アニメーション (Windows)
+// http://msdn.microsoft.com/ja-jp/library/ie/hh673530(v=vs.85).aspx
+
+// vendor
+vendors = webkit official
+@keyframes keyStage
+	from,1%
+		height: 0;
+	to
+		height: areaSizingH;
+		
+// total=160ms
+@keyframes keyOver
+	from
+		z-index: 0;
+	40% // 0.4 / 60ms
+		z-index: 1;
+	72% // 0.72 115ms
+		z-index: 2;
+	81% // 0.81 130ms 
+		z-index: 3;
+	91% // 0.91 145ms
+		z-index: 4;
+	to
+		z-index: 5;
+
+// switch
+@keyframes keySwitch
+	from
+		top: 100%;
+	10%,to
+		top: 0;
+
+// ball
+@keyframes keyBall1
+	from
+		m 50% 50%;
+	20%
+		margin: 0;
+	50%
+		m 50px bound
+	to
+		m outStage 20px
+	
+@keyframes keyBall2
+	from
+		m barBound 80px
+	10%
+		m 130px
+	30%
+		m 0 40px
+	60%
+		m 100px bound
+	to
+		m outStage (bound - 70px)
+		
+@keyframes keyBall3
+	from
+		m barBound (bound - 45px);
+	40%
+		m 0 120px
+	to
+		m outStage
+		
+@keyframes keyBall4
+	from
+		m barBound 20px;
+	20%
+		m 190px
+	45%
+		m 150px bound
+	70%
+		m 30px
+	80%
+		m 0 50px
+	to
+		m outStage 140px
+
+@keyframes keyBall5
+	from
+		m barBound 124px;
+	50%
+		m 0 (bound - 40px)
+	to
+		m outStage (bound - 10px)
+	
+@keyframes  keyBall6
+	from
+		m barBound (bound - 30px);
+	20%
+		margin: 80px auto 0;
+	to
+		width: 90px;
+		height: 90px;
+		margin: 40px auto 0;
+		padding: 24px;
+		text-indent: 0;
+		
+		
+	

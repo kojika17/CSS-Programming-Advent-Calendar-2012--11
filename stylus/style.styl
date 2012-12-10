@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+@import 'module/config';
+@import 'module/mixin';
+@import 'module/page';
+
+#game {
+	overflow: hidden;
+	list-style: none;
+	border: 1px solid #666;
+	width: areaSizingW;
+	height: areaSizingH;
+	padding: 0;
+	margin: auto;
+	position: relative;
+	cursor: col-resize;
+}
+
+.bar {
+	position: absolute;
+	top: 0;
+	z-index: 100;
+	width: barCore;
+	height: barLine;
+	&:hover {
+		z-index: 99;
+		padding: 0 (barWidth / 2);
+		margin-left: -(barWidth / 2);
+		border-bottom: barHeight solid #000;
+	}
+}
+
+for i in 1..100 {
+	.bar{i} {
+		left: (i * barGap) + (barWidth / 2);
+	}
+}
+
+// stage
+[id^=stage],
+#gameover {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: areaSizingW;
+	height: 0;
+	background: #fcfcfc;
+	animation-fill-mode: forwards;
+}
+#gameover {
+	height: areaSizingH;
+	background: #666;
+	animations(keyOver, 0s, 16s);
+	animation-fill-mode: forwards;
+	z-index: 0;
+}
+.overTitle {
+	margin: 80px 20px 0;
+	text-shadow:0 1px 1px #222;
+	font-size: 32px;
+	font-weight: bold;
+	color: #ddd;
+	text-align: center;
+}
+
+#stage1 {
+	height: areaSizingH;
+	z-index: 1;
+}
+
+// Sass用
+/* $stage: 6
+
+%exAnime
+  animation: keyAnime
+	
+%exRun
+  animation-state: running
+
+@for $i from 2 through $stage
+  #stage#{$i}
+    @extend %exAnime
+      .switch#{$i} ~ &
+        @extend %exRun
+*/
+
+for i in 2..stage {
+	#stage{i} {
+		z-index: i;
+		overflow: hidden;
+	}
+}
+#stage2,
+#stage3,
+#stage4,
+#stage5,
+#stage6 {
+	animations(keyStage);
+	animation-fill-mode: forwards;
+	animation-play-state: paused;
+}
+.switch2:hover ~ #stage2,
+.switch3:hover ~ #stage3,
+.switch4:hover ~ #stage4,
+.switch5:hover ~ #stage5,
+.switch6:hover ~ #stage6 {
+	animation-play-state: running;
+}
+
+// Stage Switch Btn
+// stage2 switch
+.switch {
+	top: 100%;
+	// debug
+	// background: rgba(#f60, 0.5); 
+}
+
+.switch2 {
+	animations(keySwitch, 5.5s, 1.2s);
+	@extend .switch;
+}
+.switch3 {
+	animations(keySwitch, 10.2s, 1s);
+	@extend .switch;
+}
+.switch4 {
+	animations(keySwitch, 11.6s, 0.6s);
+	@extend .switch;
+}
+.switch5 {
+	animations(keySwitch, 13.7s, 0.6s);
+	@extend .switch;
+}
+.switch6 {
+	animations(keySwitch, 14.7s, 0.6s);
+	@extend .switch;
+}
+
+
+@import 'module/ball';
+@import 'module/animation';

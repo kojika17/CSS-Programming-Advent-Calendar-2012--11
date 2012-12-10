@@ -1,0 +1,274 @@
+@charset 'utf-8';
+#test {
+  width: 480px;
+  margin: auto;
+  border: 1px solid #fff;
+  position: relative;
+}
+[class^="btn"] {
+  width: 32px;
+  border: 1px solid #aaa;
+  float: left;
+}
+.btn1 {
+  background: #aaa;
+  height: 10px;
+}
+.btn1:hover {
+  background: #000;
+}
+.btn2 {
+  background: #c00;
+  animation-name: btn;
+  animation-duration: 2s;
+}
+.btn3 {
+  background: #f60;
+  animation-name: btn;
+  animation-duration: 2s;
+  animation-delay: 3s;
+}
+#gameover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 300px;
+  background: #aaa;
+  animation-name: z;
+  animation-duration: 6s;
+  animation-fill-mode: forwards;
+}
+[id^="area"] {
+  height: 0;
+  border: 1px solid #333;
+  background: #fff;
+  margin: 8px 0;
+  overflow: hidden;
+  position: relative;
+}
+#area1 {
+  margin-top: 40px;
+  animation-name: a1;
+  animation-duration: 0.5s;
+  animation-play-state: paused;
+  animation-fill-mode: both;
+  z-index: 1;
+}
+.btn1:hover ~ #area1 {
+  animation-play-state: running;
+}
+#area2 {
+  animation-name: a1;
+  animation-duration: 0.5s;
+  animation-play-state: paused;
+  animation-fill-mode: both;
+  z-index: 2;
+}
+.btn2:hover ~ #area2 {
+  animation-play-state: running;
+}
+#area3 {
+  animation-name: a1;
+  animation-duration: 0.5s;
+  animation-play-state: paused;
+  animation-fill-mode: both;
+  z-index: 3;
+}
+.btn3:hover ~ #area3 {
+  animation-play-state: running;
+}
+@-moz-keyframes a1 {
+  0%, 1% {
+    height: 0;
+  }
+
+  100% {
+    height: 60px;
+  }
+}
+@-webkit-keyframes a1 {
+  0%, 1% {
+    height: 0;
+  }
+
+  100% {
+    height: 60px;
+  }
+}
+@-o-keyframes a1 {
+  0%, 1% {
+    height: 0;
+  }
+
+  100% {
+    height: 60px;
+  }
+}
+@-ms-keyframes a1 {
+  0%, 1% {
+    height: 0;
+  }
+
+  100% {
+    height: 60px;
+  }
+}
+@keyframes a1 {
+  0%, 1% {
+    height: 0;
+  }
+
+  100% {
+    height: 60px;
+  }
+}
+@-moz-keyframes z {
+  0% {
+    z-index: 0;
+  }
+
+  30% {
+    z-index: 1;
+  }
+
+  60% {
+    z-index: 2;
+  }
+
+  100% {
+    z-index: 3;
+  }
+}
+@-webkit-keyframes z {
+  0% {
+    z-index: 0;
+  }
+
+  30% {
+    z-index: 1;
+  }
+
+  60% {
+    z-index: 2;
+  }
+
+  100% {
+    z-index: 3;
+  }
+}
+@-o-keyframes z {
+  0% {
+    z-index: 0;
+  }
+
+  30% {
+    z-index: 1;
+  }
+
+  60% {
+    z-index: 2;
+  }
+
+  100% {
+    z-index: 3;
+  }
+}
+@-ms-keyframes z {
+  0% {
+    z-index: 0;
+  }
+
+  30% {
+    z-index: 1;
+  }
+
+  60% {
+    z-index: 2;
+  }
+
+  100% {
+    z-index: 3;
+  }
+}
+@keyframes z {
+  0% {
+    z-index: 0;
+  }
+
+  30% {
+    z-index: 1;
+  }
+
+  60% {
+    z-index: 2;
+  }
+
+  100% {
+    z-index: 3;
+  }
+}
+@-moz-keyframes btn {
+  0%, 49% {
+    height: 0;
+  }
+
+  50%, 99% {
+    height: 30px;
+  }
+
+  100% {
+    height: 0;
+  }
+}
+@-webkit-keyframes btn {
+  0%, 49% {
+    height: 0;
+  }
+
+  50%, 99% {
+    height: 30px;
+  }
+
+  100% {
+    height: 0;
+  }
+}
+@-o-keyframes btn {
+  0%, 49% {
+    height: 0;
+  }
+
+  50%, 99% {
+    height: 30px;
+  }
+
+  100% {
+    height: 0;
+  }
+}
+@-ms-keyframes btn {
+  0%, 49% {
+    height: 0;
+  }
+
+  50%, 99% {
+    height: 30px;
+  }
+
+  100% {
+    height: 0;
+  }
+}
+@keyframes btn {
+  0%, 49% {
+    height: 0;
+  }
+
+  50%, 99% {
+    height: 30px;
+  }
+
+  100% {
+    height: 0;
+  }
+}

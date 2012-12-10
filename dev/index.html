@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>switch test</title>
+	<link rel="stylesheet" href="t.css" />
+</head>
+<body>
+	<div id="test">
+		<div class="btn1"></div>
+		<div class="btn2"></div>
+		<div class="btn3"></div>
+
+		
+		<div id="area1">aa</div>
+		<div id="area2">aa</div>
+		<div id="area3">aa</div>
+		<div id="gameover">game over</div>
+	</div>
+	
+<!--
+# first
+- switch1(delay 3s)
+- btn
+- stage1
+
+# on second
+- switch2(delay 6s)
+- switch1(delay 3s)
+- btn
+- stage2
+- stage1 (fixed)
+
+# over
+....
+- switch3(delay 9s)
+- switch2(delay 6s)
+- switch1(delay 3s)
+- btn
+
+- Clear
+.....
+- stage3
+--- GameOver (z-index & delay 6s)
+- stage2 (fixed)
+-- GameOver (z-index & delay 3s)
+- stage1 (fixed)
+- GameOver (z-index)
+
+-->
+</body>
+</html>

@@ -1,0 +1,19 @@
+// mixin
+
+animations(aName, aDelay = 0s, aDuration = 0.1s, aFunction = ease-in) {
+	-webkit-animation: aName aDuration aFunction aDelay 1 normal;
+	animation: aName aDuration aFunction aDelay 1 normal;
+}
+animation-fill-mode() {
+	-webkit-animation-fill-mode: arguments;
+	animation-fill-mode: arguments;
+}
+animation-play-state() {
+	-webkit-animation-play-state: arguments;
+	animation-play-state: arguments;
+}
+
+m(mt, ml = 0) {
+	margin-top: mt;
+	margin-left: ml;
+}
